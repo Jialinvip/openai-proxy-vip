@@ -21,8 +21,7 @@ Deno.serve(async (request) => {
     }
 
     // Extract token from Authorization header (remove "Bearer " prefix)
-    const authHeader = request.headers.get("authorization");
-    const token = authHeader ? authHeader.split(' ')[1] : null;
+    const token = request.headers.get("x-api-key");
 
     if (token === apiKey) {
       // Proxy to Anthropic
