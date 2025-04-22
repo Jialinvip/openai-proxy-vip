@@ -1,3 +1,3 @@
 Deno.serve(() => {
-  return fetch("https://www.gptvip.cn");
+  return fetch("请访问: www.gptvip.cn");
 });
